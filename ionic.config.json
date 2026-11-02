@@ -1,0 +1,7 @@
+{
+  "name": "pipas-movil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
