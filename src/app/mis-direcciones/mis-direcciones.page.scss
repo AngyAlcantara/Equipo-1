@@ -1,0 +1,169 @@
+/* Encabezado */
+.page-header ion-toolbar {
+  --background: #B6DAE2;
+  --color: #000000;
+  --min-height: 60px;
+}
+
+.page-header ion-title {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-header ion-button {
+  --color: #000000;
+}
+
+/* Fondo principal */
+.addresses-content {
+  --background: #E3F7EE;
+}
+
+/* Contenedor principal */
+.addresses-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Icono cuando no hay direcciones */
+.empty-icon {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background: #B6DAE2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+
+.empty-icon ion-icon {
+  font-size: 60px;
+  color: #557338;
+}
+
+/* Mensaje de pantalla vacía */
+.empty-message {
+  text-align: center;
+  max-width: 310px;
+  margin-bottom: auto;
+}
+
+.empty-message h2 {
+  color: #000000;
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.empty-message p {
+  color: #767676;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Lista de direcciones */
+.address-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Tarjeta */
+.address-card {
+  width: 100%;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #B6DAE2;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Título de tarjeta */
+.address-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.address-card-title ion-icon {
+  font-size: 25px;
+  color: #557338;
+}
+
+.address-card-title h2 {
+  color: #000000;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Información de dirección */
+.address-card p {
+  color: #767676;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 9px 0;
+  overflow-wrap: anywhere;
+}
+
+.address-card strong {
+  color: #000000;
+}
+
+/* Botones de acciones */
+.address-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+/* Botón editar */
+.edit-button {
+  --color: #2199BF;
+  --border-color: #2199BF;
+  --border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Botón eliminar */
+.delete-button {
+  --background: #ED1010;
+  --background-activated: #762727;
+  --color: #FFFFFF;
+  --border-radius: 8px;
+  --box-shadow: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Botón agregar */
+.add-button {
+  width: 100%;
+  max-width: 320px;
+  height: 52px;
+  margin-top: 30px;
+  flex-shrink: 0;
+
+  --background: #6FB132;
+  --background-activated: #557338;
+  --color: #FFFFFF;
+  --border-radius: 12px;
+  --box-shadow: none;
+
+  font-size: 14px;
+  font-weight: bold;
+}

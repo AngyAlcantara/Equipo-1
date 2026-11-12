@@ -1,0 +1,133 @@
+<ion-header class="page-header">
+  <ion-toolbar>
+
+    <!-- Botón regresar -->
+    <ion-button
+      slot="start"
+      fill="clear"
+      routerLink="/home"
+      aria-label="Regresar"
+    >
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+
+    <ion-title>Mis direcciones</ion-title>
+
+    <!-- Botón inicio -->
+    <ion-button
+      slot="end"
+      fill="clear"
+      routerLink="/home"
+      aria-label="Inicio"
+    >
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="addresses-content">
+
+  <div class="addresses-container">
+
+    <!-- Cuando no hay direcciones -->
+    @if (direcciones.length === 0) {
+
+      <div class="empty-icon">
+        <ion-icon name="location-outline"></ion-icon>
+      </div>
+
+      <div class="empty-message">
+        <h2>Aún no tienes direcciones guardadas</h2>
+
+        <p>
+          Agrega tu primera dirección para facilitar
+          tus próximos pedidos de agua.
+        </p>
+      </div>
+
+    } @else {
+
+      <!-- Lista de direcciones -->
+      <div class="address-list">
+
+        @for (direccion of direcciones; track $index) {
+
+          <div class="address-card">
+
+            <div class="address-card-title">
+              <ion-icon name="location-outline"></ion-icon>
+              <h2>{{ direccion.nombre }}</h2>
+            </div>
+
+            <p>
+              <strong>Dirección:</strong>
+              {{ direccion.direccion }}
+            </p>
+
+            @if (direccion.referencia) {
+              <p>
+                <strong>Referencia:</strong>
+                {{ direccion.referencia }}
+              </p>
+            }
+
+            <p>
+              <strong>Teléfono:</strong>
+              {{ direccion.telefono }}
+            </p>
+
+            @if (direccion.indicaciones) {
+              <p>
+                <strong>Indicaciones:</strong>
+                {{ direccion.indicaciones }}
+              </p>
+            }
+
+            <!-- Botones de acciones -->
+            <div class="address-actions">
+
+              <!-- Editar -->
+              <ion-button
+                fill="outline"
+                class="edit-button"
+                [routerLink]="['/agregar-direccion']"
+                [queryParams]="{ editar: $index }"
+              >
+                <ion-icon name="create-outline" slot="start"></ion-icon>
+                EDITAR
+              </ion-button>
+
+              <!-- Eliminar -->
+              <ion-button
+                fill="solid"
+                class="delete-button"
+                (click)="confirmarEliminar($index)"
+              >
+                <ion-icon name="trash-outline" slot="start"></ion-icon>
+                ELIMINAR
+              </ion-button>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    }
+
+    <!-- Botón agregar dirección -->
+    <ion-button
+      expand="block"
+      class="add-button"
+      routerLink="/agregar-direccion"
+    >
+      <ion-icon name="add-outline" slot="start"></ion-icon>
+      AGREGAR DIRECCIÓN
+    </ion-button>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,115 @@
+<ion-header class="page-header">
+  <ion-toolbar>
+
+    <ion-button
+      slot="start"
+      fill="clear"
+      routerLink="/mis-direcciones"
+      aria-label="Regresar"
+    >
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+
+    <ion-title>
+      {{ modoEdicion ? 'Editar dirección' : 'Agregar dirección' }}
+    </ion-title>
+
+    <ion-button
+      slot="end"
+      fill="clear"
+      routerLink="/home"
+      aria-label="Inicio"
+    >
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="form-content">
+
+  <div class="form-container">
+
+    <div class="form-title">
+      <h2>
+        {{ modoEdicion ? 'Editar dirección' : 'Nueva dirección' }}
+      </h2>
+
+      <p>
+        {{ modoEdicion
+          ? 'Modifica los datos de tu dirección.'
+          : 'Completa los siguientes datos para registrar tu dirección.' }}
+      </p>
+    </div>
+
+    <div class="form-fields">
+
+      <div class="field">
+        <ion-input
+          label="Nombre de la dirección *"
+          labelPlacement="stacked"
+          placeholder="Ej. Casa o Trabajo"
+          fill="outline"
+          [(ngModel)]="nombre"
+        ></ion-input>
+      </div>
+
+      <div class="field">
+        <ion-input
+          label="Dirección completa *"
+          labelPlacement="stacked"
+          placeholder="Calle, número, colonia y ciudad"
+          fill="outline"
+          [(ngModel)]="direccion"
+        ></ion-input>
+      </div>
+
+      <div class="field">
+        <ion-input
+          label="Referencia (opcional)"
+          labelPlacement="stacked"
+          placeholder="Ej. Cerca de una tienda"
+          fill="outline"
+          [(ngModel)]="referencia"
+        ></ion-input>
+      </div>
+
+      <div class="field">
+        <ion-input
+          label="Teléfono *"
+          labelPlacement="stacked"
+          type="tel"
+          placeholder="Ingresa tu teléfono"
+          fill="outline"
+          [(ngModel)]="telefono"
+        ></ion-input>
+      </div>
+
+      <div class="field">
+        <ion-textarea
+          label="Indicaciones adicionales (opcional)"
+          labelPlacement="stacked"
+          placeholder="Escribe indicaciones para encontrar tu domicilio"
+          fill="outline"
+          rows="3"
+          [(ngModel)]="indicaciones"
+        ></ion-textarea>
+      </div>
+
+    </div>
+
+    @if (mensajeError) {
+      <p class="error-message">{{ mensajeError }}</p>
+    }
+
+    <ion-button
+      expand="block"
+      class="save-button"
+      (click)="guardarDireccion()"
+    >
+      {{ modoEdicion ? 'GUARDAR CAMBIOS' : 'GUARDAR DIRECCIÓN' }}
+    </ion-button>
+
+  </div>
+
+</ion-content>

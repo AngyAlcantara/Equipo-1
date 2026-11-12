@@ -1,0 +1,124 @@
+<ion-header class="page-header">
+  <ion-toolbar>
+
+    <!-- Botón regresar -->
+    <ion-button
+      slot="start"
+      fill="clear"
+      routerLink="/home"
+      aria-label="Regresar"
+    >
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+
+    <ion-title>Solicitar Pipa</ion-title>
+
+    <!-- Botón inicio -->
+    <ion-button
+      slot="end"
+      fill="clear"
+      routerLink="/home"
+      aria-label="Inicio"
+    >
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="request-content">
+
+  <div class="request-container">
+
+    <!-- Nombre de la aplicación -->
+    <div class="app-name">
+      <h1>Pipas Juárez</h1>
+    </div>
+
+    <!-- Título de la sección -->
+    <div class="section-title">
+      <h2>Elegir cantidad</h2>
+      <p>¿Cuánta agua necesitas?</p>
+    </div>
+
+    <!-- Selección de cantidad -->
+    <ion-radio-group
+      [value]="cantidadSeleccionada"
+      (ionChange)="cambiarCantidad($event)"
+    >
+
+      <!-- 5,000 litros -->
+      <div class="quantity-option">
+        <ion-radio
+          value="5000"
+          labelPlacement="end"
+          justify="start"
+        >
+          5,000 Litros
+        </ion-radio>
+      </div>
+
+      <!-- 10,000 litros -->
+      <div class="quantity-option">
+        <ion-radio
+          value="10000"
+          labelPlacement="end"
+          justify="start"
+        >
+          10,000 Litros
+        </ion-radio>
+      </div>
+
+      <!-- Otra cantidad -->
+      <div class="quantity-option">
+        <ion-radio
+          value="otra"
+          labelPlacement="end"
+          justify="start"
+        >
+          Otra cantidad
+        </ion-radio>
+
+        <ion-icon
+          name="chevron-forward-outline"
+          class="option-arrow"
+        ></ion-icon>
+      </div>
+
+    </ion-radio-group>
+
+    <!-- Campo para cantidad personalizada -->
+    @if (cantidadSeleccionada === 'otra') {
+
+      <div class="custom-quantity">
+
+        <ion-input
+          label="Ingresa la cantidad de litros"
+          labelPlacement="stacked"
+          type="number"
+          fill="outline"
+          placeholder="Ej. 8000"
+          [value]="otraCantidad"
+          (ionInput)="actualizarOtraCantidad($event)"
+          min="1"
+        ></ion-input>
+
+      </div>
+
+    }
+
+    <!-- Botón continuar -->
+    <div class="button-container">
+      <ion-button
+        type="button"
+        expand="block"
+        class="continue-button"
+        (click)="continuar()"
+      >
+        CONTINUAR
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>
