@@ -1,21 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Blank </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="welcome-content">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="welcome-container">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a>
-    </p>
+    <!-- Espacio reservado para el logotipo -->
+    <div class="logo-container">
+      <div class="logo-placeholder">
+        <ion-icon name="image-outline"></ion-icon>
+        <p>Logotipo Pipas Juárez</p>
+      </div>
+    </div>
+
+    <!-- Nombre de la aplicación -->
+    <div class="app-name">
+      <h1>Pipas Juárez</h1>
+    </div>
+
+    <!-- Mensaje de bienvenida -->
+    <div class="welcome-text">
+      <h2>¡Bienvenido!</h2>
+      <p>Agua a tiempo</p>
+    </div>
+
+    <!-- Botón para comenzar -->
+    <div class="button-container">
+      <ion-button expand="block" class="start-button">
+        COMENZAR
+      </ion-button>
+    </div>
+
   </div>
+
 </ion-content>

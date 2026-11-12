@@ -1,0 +1,144 @@
+/* Encabezado */
+.page-header ion-toolbar {
+  --background: #B6DAE2;
+  --color: #000000;
+  --min-height: 60px;
+}
+
+.page-header ion-title {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-header ion-button {
+  --color: #000000;
+}
+
+/* Fondo principal */
+.request-content {
+  --background: #E3F7EE;
+}
+
+/* Contenedor */
+.request-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 22px;
+  box-sizing: border-box;
+}
+
+/* Nombre de la aplicación */
+.app-name {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.app-name h1 {
+  color: #000000;
+  font-size: 27px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Títulos */
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  color: #000000;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  color: #767676;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Opciones de cantidad */
+ion-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quantity-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #B6DAE2;
+  border-radius: 12px;
+  padding: 20px 16px;
+  min-height: 65px;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+/* Texto y selector */
+.quantity-option ion-radio {
+  width: 100%;
+  color: #000000;
+  --color: #767676;
+  --color-checked: #2199BF;
+  --label-color: #000000;
+  --label-color-checked: #000000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Flecha de otra cantidad */
+.option-arrow {
+  position: absolute;
+  right: 17px;
+  font-size: 21px;
+  color: #767676;
+  pointer-events: none;
+}
+
+/* Cantidad personalizada */
+.custom-quantity {
+  margin-top: 22px;
+}
+
+.custom-quantity ion-input {
+  --background: #FFFFFF;
+  --color: #000000;
+  --border-color: #B6DAE2;
+  --border-radius: 10px;
+  --highlight-color-focused: #2199BF;
+  --placeholder-color: #767676;
+}
+
+/* Mensaje de validación */
+.validation-message {
+  color: #557338;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+/* Botón continuar */
+.button-container {
+  width: 100%;
+  max-width: 320px;
+  margin: auto auto 15px;
+  padding-top: 35px;
+}
+
+.continue-button {
+  height: 52px;
+  --background: #6FB132;
+  --background-activated: #557338;
+  --color: #FFFFFF;
+  --border-radius: 12px;
+  --box-shadow: none;
+  font-size: 15px;
+  font-weight: bold;
+}
