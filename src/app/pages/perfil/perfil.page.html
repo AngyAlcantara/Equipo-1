@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="titulo-pagina">Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor-perfil">
+    
+    <!-- Cuadro de imagen de usuario (placeholder) -->
+    <div class="avatar-placeholder">
+      <svg viewBox="0 0 100 130" preserveAspectRatio="none">
+        <line x1="0" y1="0" x2="100" y2="130" stroke="#444" stroke-width="1" />
+        <line x1="100" y1="0" x2="0" y2="130" stroke="#444" stroke-width="1" />
+      </svg>
+    </div>
+
+    <ion-text>
+      <p class="nombre-usuario">UsuarioX</p>
+    </ion-text>
+
+    <!-- Lista de opciones -->
+    <ion-list lines="none" class="lista-opciones">
+      <ion-item button detail="false" routerLink="/datos-personales" class="opcion-item">
+        <ion-icon slot="start" name="person" class="icono-opcion"></ion-icon>
+        <ion-label>Datos personales</ion-label>
+      </ion-item>
+
+      <ion-item button detail="false" routerLink="/mis-direcciones" class="opcion-item">
+        <ion-icon slot="start" name="home" class="icono-opcion"></ion-icon>
+        <ion-label>Mis direcciones</ion-label>
+      </ion-item>
+
+      <ion-item button detail="false" routerLink="/cambiar-password" class="opcion-item">
+        <ion-icon slot="start" name="key" class="icono-opcion"></ion-icon>
+        <ion-label>Cambiar contraseña</ion-label>
+      </ion-item>
+
+      <ion-item button detail="false" routerLink="/login" class="opcion-item">
+        <ion-icon slot="start" name="log-out-outline" class="icono-opcion"></ion-icon>
+        <ion-label>Cerrar sesión</ion-label>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+.titulo-pagina {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.filtros-fila {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-filtro {
+  --border-radius: 6px;
+  --border-color: #d1d5db;
+  --color: var(--ion-text-color, #222);
+  text-transform: none;
+  font-size: 0.9rem;
+  height: 36px;
+}
+
+.tarjeta-pedido {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 0 0 18px 0;
+
+  p {
+    margin: 0 0 6px 0;
+  }
+
+  .folio {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .litros, .estado {
+    font-size: 0.9rem;
+  }
+
+  .enlace-detalle {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+}
+
+.fila-entregado {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.icono-check {
+  color: #10b981;
+  font-size: 1.1rem;
+}

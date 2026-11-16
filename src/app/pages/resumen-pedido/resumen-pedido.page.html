@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/solicitar-fecha" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo-header">Resumen del pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor-resumen">
+    
+    <ion-text>
+      <p class="marca">Pipas Juárez</p>
+    </ion-text>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Cantidad</p></ion-text>
+      <ion-input fill="outline" value="10,000 litros" readonly="true"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Dirección</p></ion-text>
+      <ion-input fill="outline" value="Calle XXX" readonly="true"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Referencia</p></ion-text>
+      <ion-input fill="outline" value="XXXXX" readonly="true"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Fecha</p></ion-text>
+      <ion-input fill="outline" value="25/09/2026" readonly="true"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Horario</p></ion-text>
+      <ion-input fill="outline" value="9:00 - 11:00" readonly="true"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Total: $</p></ion-text>
+      <ion-input fill="outline" value="$ xxx.xx" readonly="true"></ion-input>
+    </div>
+
+    <ion-button expand="block" fill="outline" routerLink="/pedido-confirmado" class="btn-confirmar">
+      Confirmar Pedido
+    </ion-button>
+
+  </div>
+</ion-content>

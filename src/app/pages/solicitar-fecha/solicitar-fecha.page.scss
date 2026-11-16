@@ -1,0 +1,47 @@
+.titulo-header {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contenedor-fecha {
+  padding: 0 4px;
+}
+
+.marca {
+  font-size: 0.95rem;
+  margin: 0 0 24px 12px;
+}
+
+.campo-grupo {
+  margin-bottom: 20px;
+}
+
+.etiqueta {
+  margin: 0 0 8px 2px;
+  font-size: 0.95rem;
+}
+
+.etiqueta-grande {
+  margin: 0 0 8px 2px;
+  font-size: 1.15rem;
+}
+
+.btn-horario {
+  --border-radius: 6px;
+  --border-color: #d1d5db;
+  --color: var(--ion-text-color, #222);
+  justify-content: flex-start;
+  height: 46px;
+  margin-bottom: 12px;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.btn-continuar {
+  --border-radius: 6px;
+  --border-color: #d1d5db;
+  --color: var(--ion-text-color, #222);
+  font-weight: bold;
+  height: 48px;
+  margin-top: 28px;
+}

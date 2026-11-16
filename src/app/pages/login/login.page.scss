@@ -1,0 +1,58 @@
+.contenedor-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 10px 0;
+}
+
+.logo-circulo {
+  width: 120px;
+  height: 120px;
+  border: 1.5px solid var(--ion-text-color, #222);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+}
+
+.campo-grupo {
+  margin-bottom: 16px;
+}
+
+.etiqueta {
+  margin: 0 0 6px 2px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.item-check {
+  --padding-start: 0;
+  --background: transparent;
+  margin-bottom: 12px;
+}
+
+.texto-link {
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-accion {
+  --border-radius: 8px;
+  --border-color: var(--ion-text-color, #222);
+  --color: var(--ion-text-color, #222);
+  font-weight: bold;
+  height: 46px;
+  margin-bottom: 12px;
+}
+
+.texto-cuenta {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 8px 0 4px 0;
+  p {
+    margin: 0;
+  }
+}

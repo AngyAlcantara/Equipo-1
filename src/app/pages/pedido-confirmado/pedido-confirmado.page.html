@@ -1,0 +1,34 @@
+<ion-content class="ion-padding">
+  <div class="contenedor-confirmado">
+
+    <!-- Fila superior: Círculo verde con palomita + textos -->
+    <div class="cabecera-exito">
+      <div class="circulo-check">
+        <ion-icon name="checkmark"></ion-icon>
+      </div>
+      <div class="textos-exito">
+        <ion-text>
+          <h2 class="titulo-exito">¡Pedido solicitado!</h2>
+        </ion-text>
+        <ion-text color="medium">
+          <p class="folio">Pedido #PJ-001</p>
+        </ion-text>
+      </div>
+    </div>
+
+    <!-- Mensaje central -->
+    <ion-text color="medium">
+      <p class="mensaje-notificacion">¡Te notificaremos cuando cambie su estado!</p>
+    </ion-text>
+
+    <!-- Botones de acción -->
+    <ion-button expand="block" fill="outline" routerLink="/detalle-pedido" class="btn-accion">
+      Ver pedido
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" routerLink="/inicio" class="btn-accion">
+      Volver al inicio
+    </ion-button>
+
+  </div>
+</ion-content>

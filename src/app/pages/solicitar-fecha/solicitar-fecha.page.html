@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/solicitar-direccion" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo-header">Fecha y horario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor-fecha">
+    
+    <ion-text>
+      <p class="marca">Pipas Juárez</p>
+    </ion-text>
+
+    <!-- Fecha -->
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Fecha</p></ion-text>
+      <ion-input fill="outline" value="[25/09/2026]"></ion-input>
+    </div>
+
+    <!-- Horario -->
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Horario</p></ion-text>
+      <ion-button expand="block" fill="outline" class="btn-horario">
+        [9:00 - 11:00]
+      </ion-button>
+      <ion-button expand="block" fill="outline" class="btn-horario">
+        [11:0 - 13:00]
+      </ion-button>
+    </div>
+
+    <!-- Otro -->
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta-grande">Otro</p></ion-text>
+      <ion-input fill="outline" placeholder=""></ion-input>
+    </div>
+
+    <ion-button expand="block" fill="outline" routerLink="/resumen-pedido" class="btn-continuar">
+      CONTINUAR
+    </ion-button>
+
+  </div>
+</ion-content>

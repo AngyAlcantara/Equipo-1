@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="titulo-pagina">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor-inicio">
+    
+    <ion-text>
+      <h2 class="saludo">Hola, usuarioX!</h2>
+    </ion-text>
+
+    <ion-text>
+      <h3 class="subtitulo-seccion">¿Qué necesitas?</h3>
+    </ion-text>
+
+    <ion-button expand="block" fill="outline" routerLink="/solicitar-cantidad" class="btn-cuadro">
+      Solicitar Pipa
+    </ion-button>
+
+    <ion-text>
+      <h3 class="subtitulo-seccion">Pedido actual</h3>
+    </ion-text>
+
+    <ion-button expand="block" fill="outline" routerLink="/mis-pedidos" class="btn-cuadro">
+      Ver pedido
+    </ion-button>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment value="inicio">
+      <ion-segment-button value="inicio" routerLink="/inicio">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="mis-pedidos" routerLink="/mis-pedidos">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Pedidos</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="perfil" routerLink="/perfil">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

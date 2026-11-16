@@ -1,0 +1,30 @@
+.titulo-pagina {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.contenedor-inicio {
+  padding: 8px 4px;
+}
+
+.saludo {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin: 0 0 24px 0;
+}
+
+.subtitulo-seccion {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin: 0 0 14px 0;
+}
+
+.btn-cuadro {
+  --border-radius: 6px;
+  --border-color: #d1d5db;
+  --color: var(--ion-text-color, #222);
+  height: 54px;
+  text-transform: none;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}

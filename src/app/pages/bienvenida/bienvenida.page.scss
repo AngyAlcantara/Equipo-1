@@ -1,0 +1,44 @@
+.contenedor-centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.logo-box {
+  width: 130px;
+  height: 130px;
+  background-color: #e5e7eb;
+  color: #111827;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.nombre-app {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 0 0 12px 0;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  margin: 0 0 40px 0;
+}
+
+.btn-comenzar {
+  --border-radius: 8px;
+  width: 160px;
+  font-weight: bold;
+}

@@ -1,0 +1,39 @@
+.titulo-pagina {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.contenedor-solicitar {
+  padding: 0 4px;
+}
+
+.marca {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 0 22px 0;
+}
+
+.titulo-seccion {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin: 0 0 18px 0;
+}
+
+.pregunta {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin: 0 0 12px 0;
+}
+
+.opcion-radio {
+  --padding-start: 0;
+  --background: transparent;
+  margin-bottom: 6px;
+}
+
+.btn-continuar {
+  --border-radius: 6px;
+  font-weight: bold;
+  height: 48px;
+  margin-top: 48px;
+}

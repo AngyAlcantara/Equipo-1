@@ -1,0 +1,25 @@
+.titulo-registro {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0 28px 0;
+}
+
+.campo-grupo {
+  margin-bottom: 18px;
+}
+
+.etiqueta {
+  margin: 0 0 6px 2px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-crear {
+  --border-radius: 8px;
+  --border-color: var(--ion-text-color, #222);
+  --color: var(--ion-text-color, #222);
+  font-weight: bold;
+  height: 46px;
+  margin-top: 24px;
+}

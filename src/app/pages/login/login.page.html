@@ -1,0 +1,44 @@
+<ion-content class="ion-padding">
+  <div class="contenedor-login">
+
+    <!-- Logo Circular -->
+    <div class="logo-circulo">
+      <ion-text><strong>Logo</strong></ion-text>
+    </div>
+
+    <!-- Campo Correo/Teléfono -->
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Correo/Teléfono</p></ion-text>
+      <ion-input fill="outline" placeholder="Ingrese su correo o teléfono"></ion-input>
+    </div>
+
+    <!-- Campo Contraseña -->
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Contraseña</p></ion-text>
+      <ion-input fill="outline" type="password" placeholder="Ingrese su contraseña"></ion-input>
+    </div>
+
+    <!-- Checkbox Olvidaste contraseña -->
+    <ion-item lines="none" class="item-check">
+      <ion-checkbox slot="start" checked="true"></ion-checkbox>
+      <ion-text routerLink="/recuperar-password" class="texto-link">
+        ¿Olvidaste tu contraseña? Haz clic aquí
+      </ion-text>
+    </ion-item>
+
+    <!-- Botón Iniciar Sesión -->
+    <ion-button expand="block" fill="outline" routerLink="/inicio" class="btn-accion">
+      INICIAR SESIÓN
+    </ion-button>
+
+    <!-- Registro -->
+    <ion-text class="texto-cuenta">
+      <p>¿No tienes cuenta?</p>
+    </ion-text>
+
+    <ion-button expand="block" fill="outline" routerLink="/registro" class="btn-accion">
+      CREAR CUENTA
+    </ion-button>
+
+  </div>
+</ion-content>

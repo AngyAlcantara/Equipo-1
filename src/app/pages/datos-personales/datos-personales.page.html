@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/perfil" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo-pagina">Datos personales</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor-datos">
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Nombre</p></ion-text>
+      <ion-input fill="outline" value="XXXXX"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Teléfono</p></ion-text>
+      <ion-input fill="outline" type="tel" value="271 XXXX"></ion-input>
+    </div>
+
+    <div class="campo-grupo">
+      <ion-text><p class="etiqueta">Correo</p></ion-text>
+      <ion-input fill="outline" type="email" value="correo@email.com"></ion-input>
+    </div>
+
+    <ion-button expand="block" color="primary" class="btn-editar">
+      Editar datos
+    </ion-button>
+
+  </div>
+</ion-content>

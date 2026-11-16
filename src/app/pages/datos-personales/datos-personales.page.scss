@@ -1,0 +1,25 @@
+.titulo-pagina {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.contenedor-datos {
+  padding: 8px 4px;
+}
+
+.campo-grupo {
+  margin-bottom: 22px;
+}
+
+.etiqueta {
+  margin: 0 0 8px 2px;
+  font-size: 0.9rem;
+}
+
+.btn-editar {
+  --border-radius: 6px;
+  height: 48px;
+  margin-top: 24px;
+  text-transform: none;
+  font-size: 1rem;
+}

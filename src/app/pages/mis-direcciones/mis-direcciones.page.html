@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/perfil" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo-pagina">Mis direcciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contenedor-direcciones">
+
+    <!-- Dirección guardada -->
+    <div class="bloque-direccion">
+      <div class="fila-titulo">
+        <ion-icon name="home" class="icono-casa"></ion-icon>
+        <ion-text><span class="titulo-casa">Casa</span></ion-text>
+      </div>
+
+      <ion-text color="medium">
+        <p class="linea-dir">Calle -------------</p>
+      </ion-text>
+      <ion-text color="medium">
+        <p class="linea-dir">Córdoba, Veracruz</p>
+      </ion-text>
+    </div>
+
+    <!-- Botones grises -->
+    <ion-button expand="block" fill="solid" class="btn-gris">
+      EDITAR
+    </ion-button>
+
+    <ion-button expand="block" fill="solid" class="btn-gris-claro">
+      <ion-icon slot="start" name="add"></ion-icon>
+      Agregar dirección
+    </ion-button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="titulo-pagina">Mis pedidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <!-- Filtros superiores -->
+  <div class="filtros-fila">
+    <ion-button fill="outline" size="small" class="btn-filtro">Todos</ion-button>
+    <ion-button fill="outline" size="small" class="btn-filtro">Activos</ion-button>
+  </div>
+
+  <!-- Tarjeta Pedido #PJ-001 -->
+  <ion-card class="tarjeta-pedido">
+    <ion-card-content>
+      <ion-text><p class="folio">#PJ-001</p></ion-text>
+      <ion-text color="medium"><p class="litros">10,000 litros</p></ion-text>
+      <ion-text><p class="estado">EN PROCESO</p></ion-text>
+      <ion-text color="primary" routerLink="/detalle-pedido" class="enlace-detalle">
+        [Detalle del pedido]
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tarjeta Pedido #PJ-000 -->
+  <ion-card class="tarjeta-pedido">
+    <ion-card-content>
+      <ion-text><p class="folio">#PJ-000</p></ion-text>
+      <ion-text color="medium"><p class="litros">5,000 litros</p></ion-text>
+      <div class="fila-entregado">
+        <ion-icon name="checkmark" class="icono-check"></ion-icon>
+        <ion-text><span>Entregado</span></ion-text>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment value="mis-pedidos">
+      <ion-segment-button value="inicio" routerLink="/inicio">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="mis-pedidos" routerLink="/mis-pedidos">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Mis Pedidos</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="perfil" routerLink="/perfil">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,31 @@
+.titulo-header {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contenedor-direccion {
+  padding: 0 4px;
+}
+
+.marca {
+  font-size: 0.95rem;
+  margin: 0 0 28px 0;
+}
+
+.campo-grupo {
+  margin-bottom: 24px;
+}
+
+.etiqueta {
+  margin: 0 0 8px 2px;
+  font-size: 0.95rem;
+}
+
+.btn-continuar {
+  --border-radius: 6px;
+  --border-color: #d1d5db;
+  --color: var(--ion-text-color, #222);
+  font-weight: bold;
+  height: 48px;
+  margin-top: 32px;
+}

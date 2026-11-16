@@ -1,0 +1,72 @@
+.titulo-header {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contenedor-detalle {
+  padding: 0 4px;
+}
+
+.folio-titulo {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin: 0 0 22px 0;
+}
+
+.lista-estados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 4px;
+}
+
+.estado-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #6b7280;
+  display: inline-block;
+}
+
+.texto-estado {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.check-activo {
+  color: #10b981;
+  font-size: 1.2rem;
+  margin: -6px 0 -6px 2px;
+}
+
+.separador {
+  border-bottom: 1px solid #e5e7eb;
+  margin: 22px 0 18px 0;
+}
+
+.datos-entrega {
+  margin-bottom: 24px;
+  p {
+    margin: 0 0 6px 0;
+    font-size: 0.9rem;
+  }
+  .cantidad {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.btn-volver {
+  --border-radius: 6px;
+  --border-color: #d1d5db;
+  --color: var(--ion-text-color, #222);
+  height: 46px;
+  text-transform: none;
+  font-size: 0.95rem;
+}

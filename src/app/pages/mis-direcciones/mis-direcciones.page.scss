@@ -1,0 +1,53 @@
+.titulo-pagina {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.contenedor-direcciones {
+  padding: 8px 4px;
+}
+
+.bloque-direccion {
+  margin-bottom: 24px;
+}
+
+.fila-titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.icono-casa {
+  font-size: 1.35rem;
+}
+
+.titulo-casa {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.linea-dir {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+}
+
+.btn-gris {
+  --background: #e5e7eb;
+  --color: #1f2937;
+  --box-shadow: none;
+  --border-radius: 6px;
+  height: 46px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.btn-gris-claro {
+  --background: #f3f4f6;
+  --color: #1f2937;
+  --box-shadow: none;
+  --border-radius: 6px;
+  height: 46px;
+  text-transform: none;
+  font-size: 0.95rem;
+}
