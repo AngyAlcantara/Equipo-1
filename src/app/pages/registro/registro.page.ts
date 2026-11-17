@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { 
   IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle,
-  IonContent, IonText, IonInput, IonButton 
+  IonContent, IonText, IonInput, IonButton, AlertController 
 } from '@ionic/angular';
 
 @Component({
@@ -13,9 +14,34 @@ import {
   standalone: true,
   imports: [
     CommonModule, 
-    RouterLink,
+    FormsModule,
     IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle,
     IonContent, IonText, IonInput, IonButton
   ]
 })
-export class RegistroPage {}
+export class RegistroPage {
+  nombre: string = '';
+  telefono: string = '';
+  correo: string = '';
+  password: string = '';
+
+  constructor(
+    private router: Router,
+    private alertController: AlertController
+  ) {}
+
+  async crearCuenta() {
+    if (!this.nombre.trim() || !this.telefono.trim() || !this.correo.trim() || !this.password.trim()) {
+      const alert = await this.alertController.create({
+        header: 'Datos incompletos',
+        message: 'Por favor, llena todos los campos (Nombre, Teléfono, Correo y Contraseña) para crear tu cuenta.',
+        buttons: ['Entendido']
+      });
+      await alert.present();
+      return;
+    }
+
+    // Si los 4 campos están llenos, navega a Inicio
+    this.router.navigate(['/inicio']);
+  }
+}

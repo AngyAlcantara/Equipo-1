@@ -16,29 +16,48 @@
   <!-- Campo Nombre -->
   <div class="campo-grupo">
     <ion-text><p class="etiqueta">Nombre</p></ion-text>
-    <ion-input fill="outline" placeholder="Ingrese su nombre"></ion-input>
+    <ion-input 
+      fill="outline" 
+      placeholder="Ingrese su nombre"
+      [(ngModel)]="nombre">
+    </ion-input>
   </div>
 
   <!-- Campo Teléfono -->
   <div class="campo-grupo">
     <ion-text><p class="etiqueta">Teléfono</p></ion-text>
-    <ion-input fill="outline" type="tel" placeholder="Ingrese un numero de teléfono"></ion-input>
+    <ion-input 
+      fill="outline" 
+      type="tel" 
+      placeholder="Ingrese un numero de teléfono"
+      [(ngModel)]="telefono">
+    </ion-input>
   </div>
 
   <!-- Campo Correo -->
   <div class="campo-grupo">
     <ion-text><p class="etiqueta">Correo</p></ion-text>
-    <ion-input fill="outline" type="email" placeholder="Ingrese un correo"></ion-input>
+    <ion-input 
+      fill="outline" 
+      type="email" 
+      placeholder="Ingrese un correo"
+      [(ngModel)]="correo">
+    </ion-input>
   </div>
 
   <!-- Campo Contraseña -->
   <div class="campo-grupo">
     <ion-text><p class="etiqueta">Contraseña</p></ion-text>
-    <ion-input fill="outline" type="password" placeholder="Ingresa una contraseña"></ion-input>
+    <ion-input 
+      fill="outline" 
+      type="password" 
+      placeholder="Ingresa una contraseña"
+      [(ngModel)]="password">
+    </ion-input>
   </div>
 
-  <!-- Botón Crear Cuenta -->
-  <ion-button expand="block" fill="outline" routerLink="/inicio" class="btn-crear">
+  <!-- Botón Crear Cuenta con validación -->
+  <ion-button expand="block" fill="outline" (click)="crearCuenta()" class="btn-crear">
     CREAR CUENTA
   </ion-button>
 

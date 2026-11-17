@@ -1,21 +1,30 @@
 <ion-content class="ion-padding">
   <div class="contenedor-login">
 
-    <!-- Logo Circular -->
+    <!-- Logo Circular (puedes dejar el texto o poner también tu imagen) -->
     <div class="logo-circulo">
-      <ion-text><strong>Logo</strong></ion-text>
+      <img src="assets/logopipas.jpg" alt="Logo Pipas Juárez" class="logo-login-img" />
     </div>
 
     <!-- Campo Correo/Teléfono -->
     <div class="campo-grupo">
       <ion-text><p class="etiqueta">Correo/Teléfono</p></ion-text>
-      <ion-input fill="outline" placeholder="Ingrese su correo o teléfono"></ion-input>
+      <ion-input 
+        fill="outline" 
+        placeholder="Ingrese su correo o teléfono"
+        [(ngModel)]="usuario">
+      </ion-input>
     </div>
 
     <!-- Campo Contraseña -->
     <div class="campo-grupo">
       <ion-text><p class="etiqueta">Contraseña</p></ion-text>
-      <ion-input fill="outline" type="password" placeholder="Ingrese su contraseña"></ion-input>
+      <ion-input 
+        fill="outline" 
+        type="password" 
+        placeholder="Ingrese su contraseña"
+        [(ngModel)]="password">
+      </ion-input>
     </div>
 
     <!-- Checkbox Olvidaste contraseña -->
@@ -26,8 +35,8 @@
       </ion-text>
     </ion-item>
 
-    <!-- Botón Iniciar Sesión -->
-    <ion-button expand="block" fill="outline" routerLink="/inicio" class="btn-accion">
+    <!-- Botón Iniciar Sesión con validación -->
+    <ion-button expand="block" fill="outline" (click)="iniciarSesion()" class="btn-accion">
       INICIAR SESIÓN
     </ion-button>
 
