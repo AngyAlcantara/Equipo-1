@@ -12,20 +12,20 @@
 
     <div class="campo-grupo">
       <ion-text><p class="etiqueta">Nombre</p></ion-text>
-      <ion-input fill="outline" value="XXXXX"></ion-input>
+      <ion-input fill="outline" [(ngModel)]="nombre"></ion-input>
     </div>
 
     <div class="campo-grupo">
       <ion-text><p class="etiqueta">Teléfono</p></ion-text>
-      <ion-input fill="outline" type="tel" value="271 XXXX"></ion-input>
+      <ion-input fill="outline" type="tel" [(ngModel)]="telefono"></ion-input>
     </div>
 
     <div class="campo-grupo">
       <ion-text><p class="etiqueta">Correo</p></ion-text>
-      <ion-input fill="outline" type="email" value="correo@email.com"></ion-input>
+      <ion-input fill="outline" type="email" [(ngModel)]="correo"></ion-input>
     </div>
 
-    <ion-button expand="block" color="primary" class="btn-editar">
+    <ion-button expand="block" color="primary" (click)="guardarCambios()" class="btn-editar">
       Editar datos
     </ion-button>
 

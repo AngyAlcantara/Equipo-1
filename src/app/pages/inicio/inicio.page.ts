@@ -8,6 +8,7 @@ import {
 } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { home, clipboardOutline, person } from 'ionicons/icons';
+import { UsuarioService } from '../../services/usuario';
 
 @Component({
   selector: 'app-inicio',
@@ -22,7 +23,13 @@ import { home, clipboardOutline, person } from 'ionicons/icons';
   ]
 })
 export class InicioPage {
-  constructor() {
+  nombreUsuario: string = 'usuarioX';
+
+  constructor(private usuarioService: UsuarioService) {
     addIcons({ home, clipboardOutline, person });
+  }
+
+  ionViewWillEnter() {
+    this.nombreUsuario = this.usuarioService.obtenerUsuario().nombre;
   }
 }

@@ -6,6 +6,7 @@ import {
   IonContent, IonText, IonItem, IonInput, 
   IonCheckbox, IonButton, AlertController 
 } from '@ionic/angular';
+import { UsuarioService } from '../../services/usuario';
 
 @Component({
   selector: 'app-login',
@@ -30,7 +31,8 @@ export class LoginPage {
 
   constructor(
     private router: Router,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private usuarioService: UsuarioService
   ) {}
 
   async iniciarSesion() {
@@ -44,7 +46,21 @@ export class LoginPage {
       return;
     }
 
-    // Si ambos campos tienen datos, navega a Inicio
+    const actual = this.usuarioService.obtenerUsuario();
+    const entrada = this.usuario.trim();
+    const esCorreo = entrada.includes('@');
+
+    // Si ya estaba registrado con ese correo o teléfono, conserva su nombre; si no, extrae uno
+    const nombreMostrar = (actual.correo === entrada || actual.telefono === entrada)
+      ? actual.nombre
+      : (esCorreo ? entrada.split('@')[0] : entrada);
+
+    this.usuarioService.guardarUsuario({
+      nombre: nombreMostrar,
+      telefono: esCorreo ? actual.telefono : entrada,
+      correo: esCorreo ? entrada : actual.correo
+    });
+
     this.router.navigate(['/inicio']);
   }
 }

@@ -6,6 +6,7 @@ import {
   IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle,
   IonContent, IonText, IonInput, IonButton, AlertController 
 } from '@ionic/angular';
+import { UsuarioService } from '../../services/usuario';
 
 @Component({
   selector: 'app-registro',
@@ -27,7 +28,8 @@ export class RegistroPage {
 
   constructor(
     private router: Router,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private usuarioService: UsuarioService
   ) {}
 
   async crearCuenta() {
@@ -41,7 +43,13 @@ export class RegistroPage {
       return;
     }
 
-    // Si los 4 campos están llenos, navega a Inicio
+    // Guarda los datos del usuario registrado
+    this.usuarioService.guardarUsuario({
+      nombre: this.nombre.trim(),
+      telefono: this.telefono.trim(),
+      correo: this.correo.trim()
+    });
+
     this.router.navigate(['/inicio']);
   }
 }
